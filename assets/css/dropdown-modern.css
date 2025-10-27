@@ -1,0 +1,296 @@
+/* ==========================================
+   ULTRA-MODERN PROFESSIONAL DROPDOWN STYLES
+   ========================================== */
+
+/* Enhanced Dropdown Container */
+.main-nav ul.nav li .dropdown-menu,
+.main-nav ul.nav li.submenu ul {
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  background: var(--dropdown-bg) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  min-width: 280px !important;
+  padding: 12px 8px !important;
+  margin-top: 0px !important;
+  padding-top: 20px !important;
+  border-radius: 16px !important;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(0, 0, 0, 0.05),
+    0 0 1px 0 rgba(0, 0, 0, 0.05) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(-8px) scale(0.96) !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  z-index: 9999 !important;
+  list-style: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  pointer-events: none !important;
+  overflow: visible !important;
+}
+
+/* Dark Mode Dropdown Enhancement */
+body.dark-mode .main-nav ul.nav li .dropdown-menu,
+body.dark-mode .main-nav ul.nav li.submenu ul {
+  background: rgba(26, 31, 46, 0.95) !important;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Show Dropdown with Bounce Animation */
+.main-nav ul.nav li.dropdown:hover .dropdown-menu,
+.main-nav ul.nav li.has-dropdown:hover .dropdown-menu,
+.main-nav ul.nav li.submenu:hover .dropdown-menu,
+.main-nav ul.nav li.submenu:hover > ul,
+.main-nav ul.nav li .dropdown-menu:hover,
+.main-nav ul.nav li.submenu ul:hover {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) scale(1) !important;
+  pointer-events: auto !important;
+}
+
+/* Dropdown List Items */
+.main-nav ul.nav li .dropdown-menu li {
+  padding: 0;
+  margin: 4px 0;
+  list-style: none;
+}
+
+/* Modern Dropdown Links */
+.main-nav ul.nav li .dropdown-menu li a {
+  display: flex !important;
+  align-items: center !important;
+  padding: 12px 16px !important;
+  color: var(--dropdown-text) !important;
+  text-decoration: none !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  font-size: 14.5px !important;
+  font-weight: 500 !important;
+  position: relative !important;
+  gap: 14px !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+
+/* Icon Container with Gradient Background */
+.main-nav ul.nav li .dropdown-menu li a i {
+  width: 36px !important;
+  height: 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 10px !important;
+  font-size: 16px !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+  flex-shrink: 0 !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  position: relative !important;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.25) !important;
+}
+
+/* Icon Specific Gradients */
+.main-nav ul.nav li .dropdown-menu li:nth-child(1) a i {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3) !important;
+}
+
+.main-nav ul.nav li .dropdown-menu li:nth-child(2) a i {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+  box-shadow: 0 2px 8px rgba(240, 147, 251, 0.3) !important;
+}
+
+.main-nav ul.nav li .dropdown-menu li:nth-child(3) a i {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+  box-shadow: 0 2px 8px rgba(79, 172, 254, 0.3) !important;
+}
+
+.main-nav ul.nav li .dropdown-menu li:nth-child(4) a i {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%) !important;
+  box-shadow: 0 2px 8px rgba(67, 233, 123, 0.3) !important;
+}
+
+.main-nav ul.nav li .dropdown-menu li:nth-child(5) a i {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%) !important;
+  box-shadow: 0 2px 8px rgba(250, 112, 154, 0.3) !important;
+}
+
+/* Hover Effect - Background Slide */
+.main-nav ul.nav li .dropdown-menu li a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+/* Dark Mode Hover Background */
+body.dark-mode .main-nav ul.nav li .dropdown-menu li a::before {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(168, 85, 247, 0.12) 100%);
+}
+
+/* Hover State */
+.main-nav ul.nav li .dropdown-menu li a:hover {
+  background-color: rgba(102, 126, 234, 0.06) !important;
+  color: var(--dropdown-text) !important;
+  transform: translateX(4px) !important;
+  padding-left: 20px !important;
+}
+
+.main-nav ul.nav li .dropdown-menu li a:hover::before {
+  opacity: 1;
+}
+
+/* Icon Hover Animation */
+.main-nav ul.nav li .dropdown-menu li a:hover i {
+  transform: scale(1.1) rotate(5deg) !important;
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4) !important;
+}
+
+/* Subtle Divider Between Items */
+.main-nav ul.nav li .dropdown-menu li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 56px;
+  right: 16px;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(0, 0, 0, 0.06) 10%, 
+    rgba(0, 0, 0, 0.06) 90%, 
+    transparent 100%);
+}
+
+body.dark-mode .main-nav ul.nav li .dropdown-menu li:not(:last-child)::after {
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.08) 10%, 
+    rgba(255, 255, 255, 0.08) 90%, 
+    transparent 100%);
+}
+
+/* Dropdown Arrow Indicator - REMOVED to avoid duplicate arrows */
+/* The arrow icon is already in the HTML, no need for CSS-generated one */
+
+/* Badge/Pill for Special Items (Optional Enhancement) */
+.main-nav ul.nav li .dropdown-menu li a .badge {
+  margin-left: auto;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Smooth Entrance Animation for Items */
+.main-nav ul.nav li.dropdown:hover .dropdown-menu li,
+.main-nav ul.nav li.has-dropdown:hover .dropdown-menu li,
+.main-nav ul.nav li.submenu:hover .dropdown-menu li {
+  animation: slideInItem 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  opacity: 0;
+}
+
+.main-nav ul.nav li.dropdown:hover .dropdown-menu li:nth-child(1),
+.main-nav ul.nav li.has-dropdown:hover .dropdown-menu li:nth-child(1),
+.main-nav ul.nav li.submenu:hover .dropdown-menu li:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.main-nav ul.nav li.dropdown:hover .dropdown-menu li:nth-child(2),
+.main-nav ul.nav li.has-dropdown:hover .dropdown-menu li:nth-child(2),
+.main-nav ul.nav li.submenu:hover .dropdown-menu li:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.main-nav ul.nav li.dropdown:hover .dropdown-menu li:nth-child(3),
+.main-nav ul.nav li.has-dropdown:hover .dropdown-menu li:nth-child(3),
+.main-nav ul.nav li.submenu:hover .dropdown-menu li:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.main-nav ul.nav li.dropdown:hover .dropdown-menu li:nth-child(4),
+.main-nav ul.nav li.has-dropdown:hover .dropdown-menu li:nth-child(4),
+.main-nav ul.nav li.submenu:hover .dropdown-menu li:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.main-nav ul.nav li.dropdown:hover .dropdown-menu li:nth-child(5),
+.main-nav ul.nav li.has-dropdown:hover .dropdown-menu li:nth-child(5),
+.main-nav ul.nav li.submenu:hover .dropdown-menu li:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+@keyframes slideInItem {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Active/Current Page Indicator */
+.main-nav ul.nav li .dropdown-menu li a.active {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  font-weight: 600;
+}
+
+.main-nav ul.nav li .dropdown-menu li a.active::after {
+  content: '';
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.6);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .main-nav ul.nav li .dropdown-menu,
+  .main-nav ul.nav li.submenu ul {
+    position: static !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin-top: 0 !important;
+    padding: 8px 0 !important;
+    background: transparent !important;
+    border: none !important;
+    backdrop-filter: none !important;
+  }
+  
+  .main-nav ul.nav li .dropdown-menu li a {
+    padding: 10px 20px !important;
+    margin: 2px 0 !important;
+  }
+  
+  .main-nav ul.nav li .dropdown-menu li a i {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+  }
+}

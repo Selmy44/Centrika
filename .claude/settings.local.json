@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(test:*)",
+      "Bash(for file in transport.html software-development.html call-center.html safaribus.html safaribus-cards.html ticqet.html ikiosk.html our-story.html values.html team.html partners-page.html careers.html)",
+      "Bash(do sed -i '/<li class=\"\"scroll-to-section\"\"><a href=\"\"..\\/contacts.html\"\">Contacts<\\/a><\\/li>/! s/<li>[ ]*$/<li class=\"\"scroll-to-section\"\"><a href=\"\"..\\/contacts.html\"\">Contacts<\\/a><\\/li>\\n                            <li>/g' \"$file\")",
+      "Bash(done)",
+      "Bash(python add_contact_links.py:*)",
+      "Bash(python3:*)",
+      "Bash(for file in values.html team.html partners-page.html careers.html software-development.html call-center.html safaribus.html safaribus-cards.html)",
+      "Bash(do if ! grep -q \"contacts.html\" \"$file\")",
+      "Bash(then echo \"Processing $file\")",
+      "Bash(fi)",
+      "Bash(for file in call-center.html safaribus.html safaribus-cards.html)",
+      "Bash(do echo \"=== $file ===\")",
+      "Bash(while read file)",
+      "Bash(do grep -q \"contacts.html\" \"$file\")",
+      "Bash(echo:*)",
+      "Bash(for:*)",
+      "Bash(do sed -i '/<link rel=\"\"stylesheet\"\" href=\"\"..\\/assets\\/css\\/dark-mode.css\"\">/d' \"$file\")",
+      "Bash(do)",
+      "Bash(if ! grep -q \"js-preloader\":*)",
+      "Bash(then)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,48 @@
+﻿            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="../index.html">Home</a></li>
+              <li class="has-dropdown dropdown submenu">
+                <a href="javascript:void(0)" class="dropdown-toggle">Solutions <i class="fa fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a href="transport.html"><i class="fas fa-bus"></i> Transport Solutions</a></li>
+                  <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Events Management</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown dropdown submenu">
+                <a href="javascript:void(0)" class="dropdown-toggle">Services <i class="fa fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a href="software-development.html"><i class="fas fa-code"></i> Software Development</a></li>
+                  <li><a href="call-center.html"><i class="fas fa-headset"></i> Call Center Solutions</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown dropdown submenu">
+                <a href="javascript:void(0)" class="dropdown-toggle">Products <i class="fa fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a href="safaribus-cards.html"><i class="fas fa-id-card"></i> SafariBus Cards</a></li>
+                  <li><a href="safaribus.html"><i class="fas fa-bus-alt"></i> SafariBus</a></li>
+                  <li><a href="ticqet.html"><i class="fas fa-ticket-alt"></i> TiCQet</a></li>
+                  <li><a href="ikiosk.html"><i class="fas fa-desktop"></i> iKiosk</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown dropdown submenu">
+                <a href="javascript:void(0)" class="dropdown-toggle">Company <i class="fa fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a href="our-story.html"><i class="fas fa-book"></i> Our Story</a></li>
+                  <li><a href="values.html"><i class="fas fa-heart"></i> Values</a></li>
+                  <li><a href="team.html"><i class="fas fa-users"></i> Team</a></li>
+                  <li><a href="partners-page.html"><i class="fas fa-handshake"></i> Partners</a></li>
+                  <li><a href="careers.html"><i class="fas fa-briefcase"></i> Careers</a></li>
+                </ul>
+              </li>
+              <li><a href="../contacts.html">Contacts</a></li>
+              <li class="nav-icon">
+                <a href="#" id="themeToggle" class="theme-toggle" title="Toggle Dark/Light Mode">
+                  <i class="fa fa-moon"></i>
+                </a>
+              </li>
+              <li class="nav-icon">
+                <a href="#" id="searchToggle" class="search-toggle" title="Search">
+                  <i class="fa fa-search"></i>
+                </a>
+              </li>
+            </ul>

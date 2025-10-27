@@ -1,0 +1,662 @@
+/* ==========================================
+   DARK MODE STYLES - ENHANCED BEAUTIFUL DESIGN
+   ========================================== */
+
+/* Dark Mode CSS Variables */
+body.dark-mode {
+  --body-bg: #0a0e1f;
+  --section-bg: #0f1527;
+  --card-bg: #1a1f3e;
+  --text-primary: #f0f3f7;
+  --text-secondary: #cbd5e1;
+  --accent-primary: #a5b4fc;
+  --accent-secondary: #818cf8;
+  --border-color: #374151;
+  --hover-bg: #242938;
+  background: linear-gradient(135deg, #0a0e1f 0%, #0f1527 50%, #0a0e1f 100%) !important;
+  color: #f0f3f7 !important;
+  background-attachment: fixed;
+}
+
+/* ===== BODY & GENERAL STYLES ===== */
+body.dark-mode {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ===== HEADER / NAVBAR ===== */
+body.dark-mode .header-area {
+  background: linear-gradient(135deg, rgba(10, 14, 26, 0.95) 0%, rgba(15, 20, 32, 0.95) 100%) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(99, 102, 241, 0.1) !important;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.15) !important;
+}
+
+body.dark-mode .background-header {
+  background: rgba(10, 14, 26, 0.98) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(99, 102, 241, 0.2) !important;
+}
+
+/* Navbar Links */
+body.dark-mode .header-area .main-nav .nav li a {
+  color: #f0f3f7 !important;
+  font-weight: 500;
+  text-shadow: none;
+}
+
+body.dark-mode .header-area .main-nav .nav li a:hover {
+  color: #818cf8 !important;
+  text-shadow: 0 0 12px rgba(129, 140, 248, 0.4);
+}
+
+body.dark-mode .header-area .main-nav .nav li a.active {
+  color: #818cf8 !important;
+  text-shadow: 0 0 12px rgba(129, 140, 248, 0.3);
+}
+
+body.dark-mode .background-header .main-nav .nav li a {
+  color: #f0f3f7 !important;
+}
+
+body.dark-mode .background-header .main-nav .nav li a:hover {
+  color: #818cf8 !important;
+  text-shadow: 0 0 12px rgba(129, 140, 248, 0.4);
+}
+
+body.dark-mode .background-header .main-nav .nav li a.active {
+  color: #818cf8 !important;
+  text-shadow: 0 0 12px rgba(129, 140, 248, 0.3);
+}
+
+/* Dropdown Arrows */
+body.dark-mode .main-nav ul.nav li.has-dropdown > a i {
+  color: #818cf8 !important;
+}
+
+/* ===== MAIN BANNER / HERO SECTION ===== */
+body.dark-mode .main-banner {
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3e 50%, #0a0e27 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+body.dark-mode .main-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at top left, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+              radial-gradient(ellipse at bottom right, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Add extra contrast overlay for hero section */
+body.dark-mode .main-banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+body.dark-mode .main-banner .left-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== DECORATIVE ANIMATED BLOBS/SHAPES FOR DARK MODE ===== */
+body.dark-mode .main-banner .show-up:before {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.12) 100%) !important;
+  box-shadow: 0 0 60px rgba(99, 102, 241, 0.3) !important;
+}
+
+body.dark-mode .main-banner .show-up:after {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(167, 139, 250, 0.1) 100%) !important;
+  box-shadow: 0 0 60px rgba(139, 92, 246, 0.25) !important;
+}
+
+/* Service item decorative elements in dark mode */
+body.dark-mode .service-item.first-service:before,
+body.dark-mode .service-item.first-service:after {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(129, 140, 248, 0.05) 100%) !important;
+}
+
+body.dark-mode .service-item.second-service:before,
+body.dark-mode .service-item.second-service:after {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(167, 139, 250, 0.05) 100%) !important;
+}
+
+body.dark-mode .service-item.third-service:before,
+body.dark-mode .service-item.third-service:after {
+  background: linear-gradient(135deg, rgba(165, 180, 252, 0.08) 0%, rgba(196, 181, 253, 0.05) 100%) !important;
+}
+
+body.dark-mode .service-item.fourth-service:before,
+body.dark-mode .service-item.fourth-service:after {
+  background: linear-gradient(135deg, rgba(129, 140, 248, 0.08) 0%, rgba(99, 102, 241, 0.05) 100%) !important;
+}
+
+/* About section decorative blob */
+body.dark-mode .about-us .left-image img {
+  filter: drop-shadow(0 10px 40px rgba(99, 102, 241, 0.3));
+}
+
+body.dark-mode .about-us .right-image:before {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.08) 100%) !important;
+  box-shadow: 0 0 80px rgba(99, 102, 241, 0.2) !important;
+}
+
+body.dark-mode .about-us .right-image:after {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(167, 139, 250, 0.06) 100%) !important;
+  box-shadow: 0 0 80px rgba(139, 92, 246, 0.15) !important;
+}
+
+/* Banner Text - HIGH VISIBILITY */
+body.dark-mode .main-banner .left-content h2,
+body.dark-mode .main-banner .left-content h1,
+body.dark-mode .main-banner .left-content h6 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 30px rgba(129, 140, 248, 0.3);
+  font-weight: 700;
+}
+
+body.dark-mode .main-banner .left-content h2,
+body.dark-mode .main-banner .left-content h1 {
+  background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+  font-weight: 800;
+}
+
+body.dark-mode .main-banner .left-content p {
+  color: #e0e7ff !important;
+  font-weight: 400;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== HEADINGS ===== */
+body.dark-mode h1,
+body.dark-mode h2 {
+  background: linear-gradient(135deg, #a5b4fc 0%, #e0e7ff 50%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
+  animation: gradientShift 6s ease infinite;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+  font-weight: 700;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: var(--text-primary) !important;
+  font-weight: 600;
+}
+
+body.dark-mode .section-heading h4 {
+  background: linear-gradient(135deg, #a5b4fc 0%, #ddd6fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+body.dark-mode .section-heading h2 {
+  background: linear-gradient(135deg, #a5b4fc 0%, #ddd6fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  font-weight: 700;
+}
+
+/* ===== PARAGRAPHS & TEXT ===== */
+body.dark-mode p {
+  color: #cbd5e1 !important;
+}
+
+body.dark-mode .left-content p,
+body.dark-mode .section-heading p {
+  color: #cbd5e1 !important;
+}
+
+/* ===== SECTIONS ===== */
+body.dark-mode .services,
+body.dark-mode .about-us,
+body.dark-mode .the-clients,
+body.dark-mode .pricing-tables {
+  background: linear-gradient(180deg, #0f1527 0%, #0a0e1f 100%) !important;
+}
+
+body.dark-mode .services {
+  background: linear-gradient(135deg, #0a0e1f 0%, #0f1527 100%) !important;
+  position: relative;
+}
+
+body.dark-mode .about-us {
+  background: linear-gradient(135deg, #0f1527 0%, #1a1f3e 50%, #0a0e1f 100%) !important;
+  position: relative;
+}
+
+body.dark-mode .the-clients {
+  background: linear-gradient(135deg, #0a0e1f 0%, #0f1527 100%) !important;
+}
+
+body.dark-mode .pricing-tables {
+  background: linear-gradient(135deg, #0f1527 0%, #1a1f3e 50%, #0f1527 100%) !important;
+}
+
+/* ===== CARDS & SERVICE ITEMS ===== */
+body.dark-mode .service-item {
+  background: linear-gradient(145deg, #1a1f3e 0%, #242950 100%) !important;
+  border: 1px solid rgba(165, 180, 252, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+
+body.dark-mode .service-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #818cf8, #6366f1, #a78bfa);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+body.dark-mode .service-item::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+body.dark-mode .service-item:hover::before {
+  opacity: 1;
+}
+
+body.dark-mode .service-item:hover::after {
+  opacity: 1;
+}
+
+body.dark-mode .service-item:hover {
+  background: linear-gradient(145deg, #242950 0%, #2d3560 100%) !important;
+  transform: translateY(-10px);
+  box-shadow: 0 16px 40px rgba(165, 180, 252, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-color: rgba(165, 180, 252, 0.5);
+}
+
+body.dark-mode .service-item h4 {
+  background: linear-gradient(135deg, #a5b4fc 0%, #ddd6fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+  font-weight: 700;
+}
+
+body.dark-mode .service-item p {
+  color: #cbd5e1 !important;
+  line-height: 1.8;
+}
+
+body.dark-mode .service-item .icon {
+  filter: drop-shadow(0 4px 12px rgba(99, 102, 241, 0.3));
+}
+
+body.dark-mode .service-item .text-button a {
+  color: #818cf8 !important;
+  font-weight: 600;
+}
+
+body.dark-mode .service-item .text-button a:hover {
+  color: #a78bfa !important;
+  text-shadow: 0 0 12px rgba(129, 140, 248, 0.4);
+}
+
+/* Box Items */
+body.dark-mode .box-item {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .box-item:hover {
+  border-color: #6366f1;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+}
+
+body.dark-mode .box-item h4 a {
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode .box-item p {
+  color: var(--text-secondary) !important;
+}
+
+/* ===== PRICING TABLES ===== */
+body.dark-mode .pricing-item-regular,
+body.dark-mode .pricing-item-pro {
+  background: linear-gradient(145deg, #1a1f2e 0%, #242938 100%) !important;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+body.dark-mode .pricing-item-regular::before,
+body.dark-mode .pricing-item-pro::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #818cf8, #6366f1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+body.dark-mode .pricing-item-regular:hover,
+body.dark-mode .pricing-item-pro:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 16px 48px rgba(99, 102, 241, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transform: translateY(-8px);
+}
+
+body.dark-mode .pricing-item-regular:hover::before,
+body.dark-mode .pricing-item-pro:hover::before {
+  opacity: 1;
+}
+
+body.dark-mode .pricing-item-pro {
+  border: 2px solid rgba(99, 102, 241, 0.4);
+  box-shadow: 0 12px 32px rgba(99, 102, 241, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .pricing-item-regular h4,
+body.dark-mode .pricing-item-pro h4 {
+  color: var(--text-primary) !important;
+  font-weight: 700;
+}
+
+body.dark-mode .pricing-item-regular .price,
+body.dark-mode .pricing-item-pro .price {
+  background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+body.dark-mode .pricing-item-regular ul li,
+body.dark-mode .pricing-item-pro ul li {
+  color: var(--text-primary) !important;
+  border-bottom: 1px solid rgba(45, 53, 72, 0.5) !important;
+}
+
+body.dark-mode .pricing-item-regular ul li.non-function,
+body.dark-mode .pricing-item-pro ul li.non-function {
+  color: var(--text-secondary) !important;
+  opacity: 0.4;
+}
+
+/* ===== BUTTONS ===== */
+body.dark-mode .white-button a {
+  background: linear-gradient(135deg, #1a1f2e 0%, #242938 100%) !important;
+  color: #818cf8 !important;
+  border: 2px solid rgba(99, 102, 241, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .white-button a:hover {
+  background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%) !important;
+  color: #ffffff !important;
+  border-color: #6366f1 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.5);
+}
+
+body.dark-mode .border-button a {
+  background: transparent !important;
+  color: #818cf8 !important;
+  border: 2px solid rgba(99, 102, 241, 0.4) !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .border-button a:hover {
+  background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%) !important;
+  color: #ffffff !important;
+  border-color: #6366f1 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+}
+
+body.dark-mode .gradient-button a,
+body.dark-mode .main-button {
+  background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+}
+
+body.dark-mode .gradient-button a:hover,
+body.dark-mode .main-button:hover {
+  background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(129, 140, 248, 0.5);
+}
+
+/* ===== FOOTER ===== */
+body.dark-mode footer {
+  background: linear-gradient(180deg, #0a0e1a 0%, #050811 100%) !important;
+  border-top: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+body.dark-mode .footer-widget h4 {
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode .footer-widget p,
+body.dark-mode .footer-widget ul li a {
+  color: var(--text-secondary) !important;
+}
+
+body.dark-mode .footer-widget ul li a:hover {
+  color: #818cf8 !important;
+}
+
+body.dark-mode .copyright-text p,
+body.dark-mode .copyright-text p a {
+  color: var(--text-secondary) !important;
+}
+
+/* ===== FORM INPUTS ===== */
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode input[type="password"],
+body.dark-mode input[type="name"],
+body.dark-mode input[type="address"],
+body.dark-mode textarea,
+body.dark-mode input[type="subject"] {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: var(--text-secondary) !important;
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1) !important;
+}
+
+/* ===== CONTACT INFO ===== */
+body.dark-mode .contact-info h4,
+body.dark-mode .contact-info h5 {
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode .contact-info p {
+  color: var(--text-secondary) !important;
+}
+
+body.dark-mode .contact-info a {
+  color: #818cf8 !important;
+}
+
+/* ===== TESTIMONIALS ===== */
+body.dark-mode .naccs .menu .thumb {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color);
+}
+
+body.dark-mode .naccs .menu .thumb h4 {
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode .naccs .menu .thumb .date,
+body.dark-mode .naccs .menu .thumb .category {
+  color: var(--text-secondary) !important;
+}
+
+body.dark-mode .client-content {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color);
+}
+
+body.dark-mode .client-content p {
+  color: var(--text-primary) !important;
+}
+
+/* ===== MODAL / POPUP ===== */
+body.dark-mode .popupContainer {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+body.dark-mode .popupHeader {
+  background-color: var(--section-bg) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+body.dark-mode .popupHeader .header_title {
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode .popupBody {
+  background-color: var(--card-bg) !important;
+}
+
+body.dark-mode .centeredText span {
+  color: var(--text-secondary) !important;
+}
+
+/* ===== SMOOTH TRANSITIONS ===== */
+body.dark-mode * {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== SCROLLBAR ===== */
+body.dark-mode::-webkit-scrollbar {
+  width: 12px;
+}
+
+body.dark-mode::-webkit-scrollbar-track {
+  background: #0a0e1a;
+}
+
+body.dark-mode::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+  border-radius: 6px;
+}
+
+body.dark-mode::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
+}
+
+/* ===== DECORATIVE BACKGROUND BLOB/SHAPE COLOR ADJUSTMENTS ===== */
+/* Adjust the colors of existing decorative background images for dark mode */
+
+/* Main banner left decoration - Beautiful purple/indigo blob behind "Welcome to Centrika" */
+body.dark-mode .main-banner:after {
+  filter: brightness(0.45) hue-rotate(235deg) saturate(2.5) contrast(1.3) !important;
+  opacity: 0.7 !important;
+  mix-blend-mode: screen;
+}
+
+/* Services section decorative shapes */
+body.dark-mode .services:after {
+  filter: brightness(0.3) hue-rotate(250deg) saturate(2) contrast(1.3);
+  opacity: 0.5;
+}
+
+body.dark-mode .services:before {
+  filter: brightness(0.35) hue-rotate(245deg) saturate(1.9) contrast(1.2);
+  opacity: 0.55;
+}
+
+/* About section decorative background */
+body.dark-mode .about-us:after {
+  filter: brightness(0.32) hue-rotate(235deg) saturate(2.2) contrast(1.4);
+  opacity: 0.5;
+}
+
+/* Pricing table decorative shapes - Regular */
+body.dark-mode .pricing-item-regular:before {
+  filter: brightness(0.4) hue-rotate(250deg) saturate(2.3) contrast(1.3);
+  opacity: 0.65;
+}
+
+body.dark-mode .pricing-item-regular:after {
+  filter: brightness(0.38) hue-rotate(255deg) saturate(2.1) contrast(1.25);
+  opacity: 0.6;
+}
+
+/* Pricing table decorative shapes - Pro */
+body.dark-mode .pricing-item-pro:before {
+  filter: brightness(0.35) hue-rotate(260deg) saturate(2.4) contrast(1.35);
+  opacity: 0.7;
+}
+
+body.dark-mode .pricing-item-pro:after {
+  filter: brightness(0.32) hue-rotate(265deg) saturate(2.2) contrast(1.3);
+  opacity: 0.65;
+}

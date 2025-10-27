@@ -1,0 +1,41 @@
+LOGO REPLACEMENT INSTRUCTIONS
+=============================
+
+To replace the logo with your Cenirika logo:
+
+1. Save your Cenirika logo image (the one with blue, yellow, and red squares) as "logo.png"
+
+2. Place the logo file in this folder:
+   c:\Users\Milly\Downloads\templatemo_570_chain_app_dev\assets\images\
+
+3. Replace the existing "logo.png" file
+
+LOGO SPECIFICATIONS:
+- Format: PNG (with transparent background recommended)
+- Recommended size: 200px width x 60px height (or similar aspect ratio)
+- The logo will automatically resize based on screen size
+
+WHERE THE LOGO APPEARS:
+- Top navigation bar (all pages)
+- Footer (all pages)
+
+All HTML files have been updated with:
+- Correct path: assets/images/logo.png
+- Alt text: "Cenirika"
+- Proper CSS styling for responsive display
+
+PAGES UPDATED:
+✓ index.html
+✓ solutions.html
+✓ services.html
+✓ products.html
+✓ company.html
+✓ insights.html
+✓ contacts.html
+
+The logo styling has been configured to:
+- Display at max 60px height in the navbar (before scroll)
+- Display at max 50px height in the navbar (after scroll)
+- Display at max 180px width in the footer
+- Automatically adjust for mobile devices
+- Work perfectly in both light and dark modes

@@ -1,0 +1,916 @@
+/* ===== Navbar Custom Styles with Dark/Light Mode ===== */
+
+/* Logo Styling */
+.header-area .main-nav .logo {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.header-area .main-nav .logo img {
+  max-height: 60px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.background-header .main-nav .logo img {
+  max-height: 50px;
+  margin-top: 5px;
+}
+
+/* Logo hover effect */
+.header-area .main-nav .logo:hover {
+  transform: scale(1.05);
+}
+
+:root {
+  --navbar-bg: #4c5dff;
+  --navbar-text: #ffffff;
+  --dropdown-bg: #ffffff;
+  --dropdown-text: #2a2a2a;
+  --dropdown-hover-bg: #4c5dff;
+  --dropdown-hover-text: #ffffff;
+  --icon-color: #ffffff;
+  --search-overlay-bg: rgba(0, 0, 0, 0.95);
+  --search-input-bg: #ffffff;
+  --search-input-text: #2a2a2a;
+  --body-bg: #ffffff;
+  --section-bg: #f8f9fa;
+  --text-primary: #2a2a2a;
+  --text-secondary: #6c757d;
+  --card-bg: #ffffff;
+  --border-color: #e9ecef;
+}
+
+body.dark-mode {
+  --navbar-bg: #0a0e1a;
+  --navbar-text: #f0f3f7;
+  --dropdown-bg: #1a1f2e;
+  --dropdown-text: #f0f3f7;
+  --dropdown-hover-bg: #6366f1;
+  --dropdown-hover-text: #ffffff;
+  --icon-color: #f0f3f7;
+  --search-overlay-bg: rgba(10, 14, 26, 0.97);
+  --search-input-bg: #1a1f2e;
+  --search-input-text: #f0f3f7;
+  --body-bg: #0a0e1a;
+  --section-bg: #0f1420;
+  --text-primary: #f0f3f7;
+  --text-secondary: #9ca3af;
+  --card-bg: #1a1f2e;
+  --border-color: #374151;
+  background: linear-gradient(135deg, #0a0e1a 0%, #0f1420 50%, #0a0e1a 100%) !important;
+  color: #f0f3f7 !important;
+  background-attachment: fixed;
+}
+
+/* Dark mode dropdown shadows */
+body.dark-mode .main-nav ul.nav li .dropdown-menu {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+/* Navbar Dropdown Styles */
+.main-nav ul.nav li.dropdown,
+.main-nav ul.nav li.has-dropdown,
+.main-nav ul.nav li.submenu {
+  position: relative;
+}
+
+.main-nav ul.nav li.dropdown > a,
+.main-nav ul.nav li.has-dropdown > a,
+.main-nav ul.nav li.submenu > a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.main-nav ul.nav li.dropdown > a i,
+.main-nav ul.nav li.has-dropdown > a i,
+.main-nav ul.nav li.submenu > a i {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.main-nav ul.nav li.dropdown:hover > a i,
+.main-nav ul.nav li.has-dropdown:hover > a i,
+.main-nav ul.nav li.submenu:hover > a i {
+  transform: rotate(180deg);
+}
+
+/* Hide Bootstrap's default dropdown-toggle arrow (caret) */
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* Dropdown menu styling - works for both .dropdown-menu and ul */
+.main-nav ul.nav li .dropdown-menu,
+.main-nav ul.nav li.submenu ul {
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  background-color: var(--dropdown-bg) !important;
+  min-width: 260px !important;
+  padding: 16px 0 !important;
+  margin-top: 0px !important;
+  padding-top: 24px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(-10px) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  z-index: 9999 !important;
+  list-style: none !important;
+  border: 1px solid var(--border-color) !important;
+  pointer-events: none !important;
+  overflow: visible !important;
+}
+
+/* Show dropdown on hover */
+.main-nav ul.nav li.dropdown:hover .dropdown-menu,
+.main-nav ul.nav li.has-dropdown:hover .dropdown-menu,
+.main-nav ul.nav li.submenu:hover .dropdown-menu,
+.main-nav ul.nav li.submenu:hover > ul,
+.main-nav ul.nav li .dropdown-menu:hover,
+.main-nav ul.nav li.submenu ul:hover {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+  z-index: 9999 !important;
+}
+
+.main-nav ul.nav li .dropdown-menu li {
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav ul.nav li .dropdown-menu li a {
+  display: flex;
+  align-items: center;
+  padding: 14px 24px;
+  color: var(--dropdown-text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  gap: 12px;
+}
+
+.main-nav ul.nav li .dropdown-menu li a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #4b8ef1, transparent);
+  opacity: 0.1;
+  transition: width 0.3s ease;
+}
+
+.main-nav ul.nav li .dropdown-menu li a:hover::before {
+  width: 4px;
+}
+
+.main-nav ul.nav li .dropdown-menu li a:hover {
+  background-color: var(--dropdown-hover-bg);
+  color: var(--dropdown-hover-text);
+  padding-left: 32px;
+  transform: translateX(4px);
+}
+
+/* Fix Contacts link - remove special styling to match other nav items */
+.header-area .main-nav .nav li:nth-child(6):not(.nav-icon) {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.background-header .main-nav .nav li:nth-child(6):not(.nav-icon) {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+/* Override template styles that break Contacts hover */
+.header-area .main-nav .nav li:nth-child(6):not(.nav-icon) a,
+.background-header .main-nav .nav li:nth-child(6):not(.nav-icon) a {
+  padding: 0 !important;
+  font-weight: 500 !important;
+}
+
+.header-area .main-nav .nav li:nth-child(5) a:hover,
+.background-header .main-nav .nav li:nth-child(5) a:hover {
+  color: #4b8ef1 !important;
+}
+
+/* Dark mode fix for Contacts hover */
+body.dark-mode .header-area .main-nav .nav li:nth-child(6):not(.nav-icon) a:hover,
+body.dark-mode .background-header .main-nav .nav li:nth-child(6):not(.nav-icon) a:hover {
+  color: #818cf8 !important;
+}
+
+/* ===== ALWAYS VISIBLE NAV ICONS ===== */
+.main-nav ul.nav li.nav-icon {
+  padding: 0 8px !important;
+  margin-left: 8px !important;
+  display: inline-block !important;
+}
+
+/* Icons - BEFORE SCROLL (transparent header) */
+.header-area .main-nav ul.nav li.nav-icon a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 50% !important;
+  background-color: rgba(76, 93, 255, 0.2) !important;
+  transition: all 0.3s ease !important;
+  padding: 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.header-area .main-nav ul.nav li.nav-icon a:hover {
+  background-color: rgba(76, 93, 255, 0.4) !important;
+  transform: scale(1.15) !important;
+  box-shadow: 0 4px 12px rgba(76, 93, 255, 0.3) !important;
+}
+
+.header-area .main-nav ul.nav li.nav-icon a i {
+  color: #4c5dff !important;
+  font-size: 19px !important;
+  margin: 0 !important;
+  display: block !important;
+}
+
+/* Icons - AFTER SCROLL (with background header) */
+.background-header .main-nav ul.nav li.nav-icon a {
+  background-color: rgba(76, 93, 255, 0.2) !important;
+}
+
+.background-header .main-nav ul.nav li.nav-icon a:hover {
+  background-color: rgba(76, 93, 255, 0.35) !important;
+}
+
+.background-header .main-nav ul.nav li.nav-icon a i {
+  color: #4c5dff !important;
+}
+
+/* Dark mode icons - BEFORE SCROLL */
+body.dark-mode .header-area .main-nav ul.nav li.nav-icon a {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+body.dark-mode .header-area .main-nav ul.nav li.nav-icon a:hover {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+body.dark-mode .header-area .main-nav ul.nav li.nav-icon a i {
+  color: #ffffff !important;
+}
+
+/* Dark mode icons - AFTER SCROLL */
+body.dark-mode .background-header .main-nav ul.nav li.nav-icon a {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+body.dark-mode .background-header .main-nav ul.nav li.nav-icon a i {
+  color: #ffffff !important;
+}
+
+/* Theme Toggle Animation */
+.theme-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover i {
+  transform: rotate(20deg);
+}
+
+body.dark-mode .theme-toggle i:before {
+  content: "\f185"; /* sun icon */
+}
+
+/* Search Overlay */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--search-overlay-bg);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.search-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.search-overlay-content {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.search-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  color: var(--navbar-text);
+  font-size: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.search-close:hover {
+  transform: rotate(90deg);
+}
+
+.search-container {
+  display: flex;
+  gap: 10px;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 15px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--search-input-bg);
+  color: var(--search-input-text);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-container input:focus {
+  box-shadow: 0 0 20px rgba(76, 93, 255, 0.5);
+}
+
+body.dark-mode .search-container input {
+  background-color: var(--search-input-bg);
+  color: var(--search-input-text);
+}
+
+.search-container button {
+  padding: 15px 25px;
+  background-color: #4c5dff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+
+.search-container button:hover {
+  background-color: #3d4ecc;
+  transform: scale(1.05);
+}
+
+/* Desktop: Force dropdown visibility on hover - Override template CSS */
+@media (min-width: 993px) {
+  .main-nav ul.nav li.submenu:hover ul,
+  .main-nav ul.nav li.dropdown:hover .dropdown-menu,
+  .main-nav ul.nav li.submenu:hover .dropdown-menu {
+    height: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+  }
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 992px) {
+  .main-nav ul.nav li .dropdown-menu,
+  .main-nav ul.nav li.submenu ul {
+    position: static !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    box-shadow: none !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    margin-top: 5px !important;
+    display: none !important;
+    height: 0 !important;
+  }
+
+  .main-nav ul.nav li.has-dropdown.active .dropdown-menu,
+  .main-nav ul.nav li.submenu.active ul {
+    display: block !important;
+    height: auto !important;
+  }
+
+  .main-nav ul.nav li.nav-icon {
+    display: inline-block;
+  }
+
+  .main-nav ul.nav li.nav-icon a {
+    background-color: transparent;
+  }
+}
+
+/* Dark Mode Body Transitions */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ===== DARK MODE NAVBAR STYLING ===== */
+
+/* Dark mode header - always has background */
+body.dark-mode .header-area {
+  background: linear-gradient(135deg, rgba(10, 14, 26, 0.95) 0%, rgba(15, 20, 32, 0.95) 100%) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(99, 102, 241, 0.1) !important;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.15) !important;
+}
+
+body.dark-mode .background-header {
+  background: rgba(10, 14, 26, 0.98) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(99, 102, 241, 0.2) !important;
+}
+
+/* Dark mode - navbar text colors (MODERN ACCENT) */
+body.dark-mode .header-area .main-nav .nav li a {
+  color: #f0f3f7 !important;
+  font-weight: 500;
+  text-shadow: none;
+}
+
+body.dark-mode .header-area .main-nav .nav li a:hover {
+  color: #818cf8 !important;
+  text-shadow: 0 0 12px rgba(129, 140, 248, 0.4);
+}
+
+body.dark-mode .header-area .main-nav .nav li a.active {
+  color: #818cf8 !important;
+  text-shadow: 0 0 12px rgba(129, 140, 248, 0.3);
+}
+
+body.dark-mode .background-header .main-nav .nav li a {
+  color: #f0f3f7 !important;
+}
+
+body.dark-mode .background-header .main-nav .nav li a:hover {
+  color: #818cf8 !important;
+  text-shadow: 0 0 12px rgba(129, 140, 248, 0.4);
+}
+
+body.dark-mode .background-header .main-nav .nav li a.active {
+  color: #818cf8 !important;
+  text-shadow: 0 0 12px rgba(129, 140, 248, 0.3);
+}
+
+/* Dark mode dropdown arrow icons */
+body.dark-mode .main-nav ul.nav li.has-dropdown > a i {
+  color: #818cf8 !important;
+}
+
+/* Dark mode section backgrounds */
+body.dark-mode .main-banner {
+  background: linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 50%, #0a0e1a 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+body.dark-mode .main-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at top, rgba(99, 102, 241, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Dark mode - banner text styling */
+body.dark-mode .main-banner .left-content h2,
+body.dark-mode .main-banner .left-content h1,
+body.dark-mode .main-banner .left-content h6 {
+  color: #f0f3f7 !important;
+  text-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
+}
+
+body.dark-mode .main-banner .left-content h2,
+body.dark-mode .main-banner .left-content h1 {
+  background: linear-gradient(135deg, #818cf8 0%, #a78bfa 50%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+body.dark-mode .main-banner .left-content p {
+  color: #9ca3af !important;
+  font-weight: 400;
+}
+
+/* Dark mode white buttons */
+body.dark-mode .white-button a {
+  background: linear-gradient(135deg, #1a1f2e 0%, #242938 100%) !important;
+  color: #818cf8 !important;
+  border: 2px solid rgba(99, 102, 241, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .white-button a:hover {
+  background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%) !important;
+  color: #ffffff !important;
+  border-color: #6366f1 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.5);
+}
+
+body.dark-mode .services,
+body.dark-mode .about-us,
+body.dark-mode .the-clients,
+body.dark-mode .pricing-tables {
+  background: linear-gradient(180deg, #0f1420 0%, #0a0e1a 100%) !important;
+}
+
+/* Dark mode section alternating backgrounds for better visual separation */
+body.dark-mode .services {
+  background: linear-gradient(135deg, #0a0e1a 0%, #0f1420 100%) !important;
+  position: relative;
+}
+
+body.dark-mode .about-us {
+  background: linear-gradient(135deg, #0f1420 0%, #1a1f2e 50%, #0a0e1a 100%) !important;
+  position: relative;
+}
+
+body.dark-mode .the-clients {
+  background: linear-gradient(135deg, #0a0e1a 0%, #0f1420 100%) !important;
+}
+
+body.dark-mode .pricing-tables {
+  background: linear-gradient(135deg, #0f1420 0%, #1a1f2e 50%, #0f1420 100%) !important;
+}
+
+body.dark-mode footer {
+  background: linear-gradient(180deg, #0a0e1a 0%, #050811 100%) !important;
+  border-top: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+/* Dark mode headings with gradient effect */
+body.dark-mode h1,
+body.dark-mode h2 {
+  background: linear-gradient(135deg, #818cf8 0%, #c4b5fd 50%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
+  animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: var(--text-primary) !important;
+  font-weight: 600;
+}
+
+body.dark-mode .section-heading h4 {
+  background: linear-gradient(135deg, #818cf8 0%, #c4b5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+body.dark-mode .section-heading h2 {
+  background: linear-gradient(135deg, #818cf8 0%, #c4b5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Dark mode paragraphs and text */
+body.dark-mode p {
+  color: var(--text-secondary) !important;
+}
+
+body.dark-mode .left-content p,
+body.dark-mode .section-heading p {
+  color: var(--text-secondary) !important;
+}
+
+/* Dark mode cards and service items */
+body.dark-mode .service-item {
+  background: linear-gradient(145deg, #1a1f2e 0%, #242938 100%) !important;
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+
+body.dark-mode .service-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #818cf8, #6366f1, #a78bfa);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+body.dark-mode .service-item::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+body.dark-mode .service-item:hover::before {
+  opacity: 1;
+}
+
+body.dark-mode .service-item:hover::after {
+  opacity: 1;
+}
+
+body.dark-mode .service-item:hover {
+  background: linear-gradient(145deg, #242938 0%, #2d3548 100%) !important;
+  transform: translateY(-10px);
+  box-shadow: 0 16px 40px rgba(99, 102, 241, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+body.dark-mode .service-item h4 {
+  background: linear-gradient(135deg, #818cf8 0%, #c4b5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+body.dark-mode .service-item p {
+  color: #9ca3af !important;
+  line-height: 1.8;
+}
+
+body.dark-mode .service-item .icon {
+  filter: drop-shadow(0 4px 12px rgba(99, 102, 241, 0.3));
+}
+
+body.dark-mode .service-item .text-button a {
+  color: #818cf8 !important;
+  font-weight: 600;
+}
+
+body.dark-mode .service-item .text-button a:hover {
+  color: #a78bfa !important;
+  text-shadow: 0 0 12px rgba(129, 140, 248, 0.4);
+}
+
+/* Dark mode box items */
+body.dark-mode .box-item {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .box-item:hover {
+  border-color: #4c5dff;
+  box-shadow: 0 4px 12px rgba(76, 93, 255, 0.15);
+}
+
+body.dark-mode .box-item h4 a {
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode .box-item p {
+  color: var(--text-secondary) !important;
+}
+
+/* Dark mode pricing tables */
+body.dark-mode .pricing-item-regular,
+body.dark-mode .pricing-item-pro {
+  background: linear-gradient(145deg, #1a1f2e 0%, #242938 100%) !important;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+body.dark-mode .pricing-item-regular::before,
+body.dark-mode .pricing-item-pro::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #818cf8, #6366f1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+body.dark-mode .pricing-item-regular:hover,
+body.dark-mode .pricing-item-pro:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 16px 48px rgba(99, 102, 241, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transform: translateY(-8px);
+}
+
+body.dark-mode .pricing-item-regular:hover::before,
+body.dark-mode .pricing-item-pro:hover::before {
+  opacity: 1;
+}
+
+body.dark-mode .pricing-item-pro {
+  border: 2px solid rgba(99, 102, 241, 0.4);
+  box-shadow: 0 12px 32px rgba(99, 102, 241, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .pricing-item-regular h4,
+body.dark-mode .pricing-item-pro h4 {
+  color: var(--text-primary) !important;
+  font-weight: 700;
+}
+
+body.dark-mode .pricing-item-regular .price,
+body.dark-mode .pricing-item-pro .price {
+  background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+body.dark-mode .pricing-item-regular ul li,
+body.dark-mode .pricing-item-pro ul li {
+  color: var(--text-primary) !important;
+  border-bottom: 1px solid rgba(45, 53, 72, 0.5) !important;
+}
+
+body.dark-mode .pricing-item-regular ul li.non-function,
+body.dark-mode .pricing-item-pro ul li.non-function {
+  color: var(--text-secondary) !important;
+  opacity: 0.4;
+}
+
+/* Dark mode buttons */
+body.dark-mode .border-button a {
+  background: transparent !important;
+  color: #818cf8 !important;
+  border: 2px solid rgba(99, 102, 241, 0.4) !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .border-button a:hover {
+  background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%) !important;
+  color: #ffffff !important;
+  border-color: #6366f1 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+}
+
+body.dark-mode .gradient-button a {
+  background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+}
+
+body.dark-mode .gradient-button a:hover {
+  background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(129, 140, 248, 0.5);
+}
+
+/* Dark mode testimonials */
+body.dark-mode .naccs .menu .thumb {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color);
+}
+
+body.dark-mode .naccs .menu .thumb h4 {
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode .naccs .menu .thumb .date,
+body.dark-mode .naccs .menu .thumb .category {
+  color: var(--text-secondary) !important;
+}
+
+body.dark-mode .client-content {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color);
+}
+
+body.dark-mode .client-content p {
+  color: var(--text-primary) !important;
+}
+
+/* Dark mode footer */
+body.dark-mode .footer-widget h4 {
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode .footer-widget p,
+body.dark-mode .footer-widget ul li a {
+  color: var(--text-secondary) !important;
+}
+
+body.dark-mode .footer-widget ul li a:hover {
+  color: #4c5dff !important;
+}
+
+body.dark-mode .copyright-text p,
+body.dark-mode .copyright-text p a {
+  color: var(--text-secondary) !important;
+}
+
+/* Dark mode form inputs */
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode input[type="password"],
+body.dark-mode input[type="address"],
+body.dark-mode textarea {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode input::placeholder {
+  color: var(--text-secondary) !important;
+}
+
+/* Dark mode modal */
+body.dark-mode .popupContainer {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+body.dark-mode .popupHeader {
+  background-color: var(--section-bg) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+body.dark-mode .popupHeader .header_title {
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode .popupBody {
+  background-color: var(--card-bg) !important;
+}
+
+body.dark-mode .centeredText span {
+  color: var(--text-secondary) !important;
+}
+
+/* Smooth transitions for all elements */
+body.dark-mode * {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
