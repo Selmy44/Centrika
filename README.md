@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 Centrika - Modern Business Website
 
 A beautiful, responsive business website with **stunning dark mode** and modern UI/UX design.
@@ -140,3 +141,7 @@ This project is open source and available under the [MIT License](LICENSE).
 Made with ❤️ by Milly | © 2025 Centrika
 
 **⭐ If you like this project, give it a star on GitHub!**
+=======
+# Centrika
+This is a Centrika website
+>>>>>>> ca0ee5862151cc59644d73278542b36ae9fafad2
