@@ -282,4 +282,4 @@ html::after {
 .logo-img { max-height: 64px; max-width: 100%; object-fit: contain; filter: saturate(110%); }
 
 /* Particles.js host */
-#particles-js { position: fixed; inset: 0; z-index: -2; pointer-events: none; will-change: transform; transition: transform .15s ease-out; }
+#particles-js { position: fixed; inset: 0; z-index: -2; pointer-events: none; will-change: transform; transition: transform .15s ease-out; opacity: 1; }
